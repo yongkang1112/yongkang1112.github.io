@@ -46,13 +46,17 @@
     font-size:17px ;
 }
 
+.brand ul li a:hover{
+    text-decoration: underline ;
+}
+
 /* product */
 .product{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
-    padding: 15px;
+    gap: 25px;
+    padding: 25px;
 }
 
 .card {
