@@ -1,0 +1,42 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.header .logo{
+    font-size:18px;
+}
+
+.header .icon {
+    font-size: 30px;
+    margin-left: auto;
+}
+
+.text{
+    font-size: 50px;
+}
+
+.pic{
+    display: flex;
+    justify-content: center;
+
+}
+
+.pic .nike{
+   width: 300px;
+   height: 200px;
+   box-shadow: 0 0 5px;
+}
+.pic .puma{
+    width: 300px;
+   height: 200px;
+    box-shadow: 0 0 5px;
+ }
+ .pic .adidas{
+    width: 300px;
+   height: 200px;
+    box-shadow: 0 0 5px;
+ }
+
+
