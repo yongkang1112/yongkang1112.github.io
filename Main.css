@@ -1,6 +1,11 @@
 *{
     margin: 0;
 }
+
+h1{
+    margin: 30px 40px;
+}
+
 .top {
     width: 100%;
     height: 70px;
@@ -55,30 +60,48 @@ h2{
 .pic{
     display: block;
     margin: 0 auto;
-    width: 1200px;
+    width: 95vw;
 }
 
 h3{
     font-size: 40px;
-    margin: 30px 20px;
+    margin: 30px 40px;
 }
-.featured {
+.product {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 100px; /* Adjust the gap between items as needed */
-    margin-top: 20px; /* Optional: Add some margin to the top */
+    flex-wrap: wrap;
+    gap: 100px;
+    margin-top: 20px;
 }
 
-.featured img {
-    width: 300px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
+.product img {
+    width: 300px; 
+    height: 320px; 
+    
 }
 
-.featured .shoe, .shirt, .accessories {
+.product .shoe, .shirt, .accessories {
     text-align: center;
 }
 
-.text{
+.product .text {
     font-size: 25px;
+    margin-top: 10px;
+}
+.popular{
+    height: 50px;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 200px;
+    text-align: center;
+    font-family: arial;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
 }
