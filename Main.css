@@ -2,6 +2,15 @@
     margin: 0;
 }
 
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a :hover{
+    color: gray;
+}
+
 h1{
     margin: 30px 40px;
 }
@@ -13,6 +22,7 @@ h1{
     display: flex;
     align-items: center;
     background-color: white;
+    box-shadow: 0 0 4px;
 }
 
 .top-icon{
@@ -34,10 +44,6 @@ h1{
     position: relative;
     margin: 0 auto;
 }
-#hr1-1{
-    position: sticky;
-    top: 70px;
-}
 
 .new{
     margin-top: 90px;
@@ -46,17 +52,24 @@ h1{
 .text-new{
     width: fit-content;
     height: fit-content;
-    margin: 0 auto;
+    margin: 20px auto;
+    
+}
+
+.space{
+    height: 40px;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 h2{
-    width: 600px;
-    font-size: 33px;
-    margin: 10px 0px;
+    width: 50vw;
+    margin: 10px 5px;
     text-align: center;
     background-color: red;
     color: white;
 }
+
 .pic{
     display: block;
     margin: 0 auto;
@@ -67,41 +80,76 @@ h3{
     font-size: 40px;
     margin: 30px 40px;
 }
+
 .product {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 100px;
+    gap: 10px;
     margin-top: 20px;
 }
 
 .product img {
     width: 300px; 
-    height: 320px; 
-    
+    height: 320px;   
 }
 
 .product .shoe, .shirt, .accessories {
     text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .product .text {
     font-size: 25px;
-    margin-top: 10px;
+    margin: 10px;
 }
 .popular{
     height: 50px;
 }
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 200px;
-    text-align: center;
-    font-family: arial;
-    position: relative;
+
+.shoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.card img {
-    width: 100%;
-    height: auto;
+.item1, .item2, .item3, .item4{
+    box-shadow: 0 0 4px;
 }
+
+.shoe-1{
+    height: 300px;
+    width: 300px;
+} 
+
+.info{
+    font-size: 25px;
+    margin: 10px;
+}
+
+.footer{
+    height: 130px;
+    width: 100%;
+}
+
+.about .text-footer{
+    margin: 15px 15px;
+    font-size: 20px;
+}
+
+.about a{
+    margin-left: 15px;
+    font-size: 17px;
+    color: rgb(115, 115, 115);
+}
+
+.about a:hover{
+    color: darkblue;
+}
+.cr{
+    margin: 35px 15px;
+}
+
