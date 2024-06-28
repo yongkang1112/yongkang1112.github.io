@@ -17,6 +17,13 @@
     margin:17px 20px;
 }
 
+.top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    
+}
 header {
     display: flex;
     background-color: black;
@@ -38,4 +45,62 @@ a{
 
 .contact{
     display: flex;
+}
+
+.map{
+    height: 450px;
+    width: 450px;
+    margin: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-radius:20px;
+    border-color: rgb(185, 185, 185);
+}
+
+.info{
+    height: 450px;
+    width: 450px;
+    margin: 0px 20px;
+    border-style: solid;
+    border-radius:20px;
+    border-color: rgb(185, 185, 185);
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 27px;
+}
+
+.text-n{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px;
+}
+
+.footer{
+    height: 130px;
+    width: 100%;
+}
+
+.about .text-footer{
+    margin: 15px 15px;
+    font-size: 20px;
+}
+
+.about a{
+    margin-left: 15px;
+    font-size: 17px;
+    color: rgb(115, 115, 115);
+}
+
+.about a:hover{
+    color: darkblue;
+}
+.cr{
+    margin: 35px 15px;
 }
