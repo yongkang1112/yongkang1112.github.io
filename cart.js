@@ -43,3 +43,7 @@ function deleteItem(name) {
         displayCartItems(); // Refresh the displayed cart items
     }
 }
+
+function calculate() {
+    
+}
