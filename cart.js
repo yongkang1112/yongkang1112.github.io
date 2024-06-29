@@ -19,7 +19,6 @@ function displayCartItems() {
                 <div class="cart-item-details">
                     <h3>${item.name}</h3>
                     <p>Price: ${item.price}</p>
-                    <p>Gender: ${item.gender}</p>
                     <p>Quantity: ${item.quantity}</p>
                     <button onclick="deleteItem('${item.name}')">Delete from cart</button>
                 </div>
@@ -27,6 +26,7 @@ function displayCartItems() {
             cartItemsDiv.appendChild(itemDiv);
         });
     }
+    calculate();
 }
 
 function deleteItem(name) {
@@ -42,8 +42,4 @@ function deleteItem(name) {
         localStorage.setItem('addtocart', JSON.stringify(addtocart));
         displayCartItems(); // Refresh the displayed cart items
     }
-}
-
-function calculate() {
-    
 }
