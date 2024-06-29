@@ -21,7 +21,7 @@
             let cartItems = JSON.parse(localStorage.getItem('addtocart')) || [];
 
             let cartItemsDiv = document.getElementById('cart-items');
-            cartItemsDiv.innerHTML = ''; // 清空原有内容
+            cartItemsDiv.innerHTML = ''; 
 
             if (cartItems.length === 0) {
                 cartItemsDiv.innerHTML = '<p>Your cart is empty.</p>';
