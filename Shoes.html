@@ -11,12 +11,12 @@
 
         function addToCart(button) {
             const card = button.closest('.card');
-            const itemAj1 = card.querySelector('img').src;
+            const product = card.querySelector('img').src;
             const itemName = card.querySelector('.name').innerText;
             const itemPrice = card.querySelector('.price').innerText;
 
             const newItem = {
-                aj1: itemAj1,
+                product: product,
                 name: itemName,
                 price: itemPrice,
                 quantity: atc1

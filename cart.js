@@ -2,6 +2,36 @@ document.addEventListener('DOMContentLoaded', function() {
     displayCartItems();
 });
 
+function addToCart(button) {
+    const card = button.closest('.card');
+    const product = card.querySelector('img').src;
+    const itemName = card.querySelector('.name').innerText;
+    const itemPrice = card.querySelector('.price').innerText;
+
+    const newItem = {
+        product: product,
+        name: itemName,
+        price: itemPrice,
+        quantity: atc1
+    };
+
+    let addtocart = JSON.parse(localStorage.getItem('addtocart')) || [];
+
+    const existingItem = addtocart.find(item => item.name === itemName);
+    if (!existingItem) {
+        newItem.quantity = 1;
+        addtocart.push(newItem);
+        localStorage.setItem('addtocart', JSON.stringify(addtocart));
+        atc1 += 1;
+        alert(`"${itemName}" added to cart successfully.`);
+    } else {
+        existingItem.quantity += 1;
+        localStorage.setItem('addtocart', JSON.stringify(addtocart));
+        atc1 += 1;
+        alert(`"${itemName}" added to cart successfully.`);
+    }
+}
+
 function displayCartItems() {
     let cartItems = JSON.parse(localStorage.getItem('addtocart')) || [];
 
@@ -15,7 +45,7 @@ function displayCartItems() {
             let itemDiv = document.createElement('div');
             itemDiv.classList.add('cart-item');
             itemDiv.innerHTML = `
-                <img src="${item.aj1}" alt="${item.name}" class="cart-item-image">
+                <img src="${item.product}" alt="${item.name}" class="cart-item-image">
                 <div class="cart-item-details">
                     <h3>${item.name}</h3>
                     <p>Price: ${item.price}</p>
@@ -42,4 +72,3 @@ function deleteItem(name) {
         displayCartItems(); // Refresh the displayed cart items
     }
 }
-
