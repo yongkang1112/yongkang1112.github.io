@@ -4,21 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
-    <link rel="stylesheet" href="Cart.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css"> <!-- 你的 CSS 样式表链接 -->
 </head>
 <body>
-    <div class="top">
-        <div class="header">
-            <a href="Shoes.html"><i class='bx bx-arrow-back'></i></a>
-            <div class="mhead">Shopping Cart</div>
-        </div>
+    <div class="cart-container">
+        <h1>Shopping Cart</h1>
+        <div id="cart-items"></div>
     </div>
 
-    <div class="cart-items">
-        <!-- 购物车商品会在这里动态插入 -->
-    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            displayCartItems();
+        });
 
-    <script src="cart.js"></script>
+        function displayCartItems() {
+            let cartItems = JSON.parse(localStorage.getItem('addtocart')) || [];
+
+            let cartItemsDiv = document.getElementById('cart-items');
+            cartItemsDiv.innerHTML = ''; // 清空原有内容
+
+            if (cartItems.length === 0) {
+                cartItemsDiv.innerHTML = '<p>Your cart is empty.</p>';
+            } else {
+                cartItems.forEach(item => {
+                    let itemDiv = document.createElement('div');
+                    itemDiv.classList.add('cart-item');
+                    itemDiv.innerHTML = `
+                        <img src="${item.aj1}" alt="${item.name}" class="cart-item-image">
+                        <div class="cart-item-details">
+                            <h3>${item.name}</h3>
+                            <p>Price: ${item.price}</p>
+                            <p>Gender: ${item.gender}</p>
+                            <p>Quantity: ${item.quantity}</p>
+                        </div>
+                    `;
+                    cartItemsDiv.appendChild(itemDiv);
+                });
+            }
+        }
+    </script>
 </body>
 </html>
