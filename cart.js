@@ -26,7 +26,6 @@ function displayCartItems() {
             cartItemsDiv.appendChild(itemDiv);
         });
     }
-    calculate();
 }
 
 function deleteItem(name) {
@@ -43,3 +42,4 @@ function deleteItem(name) {
         displayCartItems(); // Refresh the displayed cart items
     }
 }
+

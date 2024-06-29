@@ -28,6 +28,24 @@
     margin-left: 10px;
 }
 
+.icon-box{
+    height: 40px;
+    width: 100%;
+    position: relative;
+    top: 20px;
+}
+
+.cart{
+    font-size: 40px;
+    position: absolute;
+    right: 4%;
+    font-style: none;
+    color: black;
+}
+
+a:hover{
+    color: rgb(95, 95, 95);
+}
 /* brand selection */
 .brand ul{
     position: absolute;
