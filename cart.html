@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
-    <link rel="stylesheet" href="styles.css"> <!-- 你的 CSS 样式表链接 -->
+    <link rel="stylesheet" href="cart.css"> 
 </head>
 <body>
     <div class="cart-container">
@@ -12,36 +12,7 @@
         <div id="cart-items"></div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            displayCartItems();
-        });
-
-        function displayCartItems() {
-            let cartItems = JSON.parse(localStorage.getItem('addtocart')) || [];
-
-            let cartItemsDiv = document.getElementById('cart-items');
-            cartItemsDiv.innerHTML = ''; 
-
-            if (cartItems.length === 0) {
-                cartItemsDiv.innerHTML = '<p>Your cart is empty.</p>';
-            } else {
-                cartItems.forEach(item => {
-                    let itemDiv = document.createElement('div');
-                    itemDiv.classList.add('cart-item');
-                    itemDiv.innerHTML = `
-                        <img src="${item.aj1}" alt="${item.name}" class="cart-item-image">
-                        <div class="cart-item-details">
-                            <h3>${item.name}</h3>
-                            <p>Price: ${item.price}</p>
-                            <p>Gender: ${item.gender}</p>
-                            <p>Quantity: ${item.quantity}</p>
-                        </div>
-                    `;
-                    cartItemsDiv.appendChild(itemDiv);
-                });
-            }
-        }
-    </script>
+    <script src="cart.js"></script>
+    
 </body>
 </html>
