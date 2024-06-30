@@ -45,9 +45,10 @@ function displayCartItems() {
             let itemDiv = document.createElement('div');
             itemDiv.classList.add('cart-item');
             itemDiv.innerHTML = `
-            <div class="cart-item-image">
-                <img src="${item.product}" alt="${item.name}" class="image">
-            </div>
+                <div class="cart-item-image">
+                    <img src="${item.product}" alt="${item.name}" class="image">
+                </div>
+                
                 <div class="cart-item-details">
                     <h3>${item.name}</h3>
                     <p>Price: ${item.price}</p>

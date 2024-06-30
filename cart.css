@@ -58,7 +58,7 @@ h1 {
 }
 
 .image {
-    width: 250px; /* Adjust image size */
+    width: 250px;
     height: auto;
     margin-right: 10px;
     border-radius: 4px;
