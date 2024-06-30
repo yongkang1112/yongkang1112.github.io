@@ -65,6 +65,7 @@ h1 {
 }
 
 .cart-item-details {
+    width: 250px;
     margin: 0px 50px;
 }
 
