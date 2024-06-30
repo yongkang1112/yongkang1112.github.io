@@ -33,7 +33,6 @@ a:hover{
     font-size: 20px;
 }
 
-
 h1 {
     text-align: center;
     color: #3b3b3b;
@@ -42,22 +41,23 @@ h1 {
 #cart-items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .cart-item {
     display: flex;
+    flex-direction: column; /* Ensure items are in a column by default */
     align-items: center;
-    width: 700px;
+    justify-content: center;
+    width: auto;
     margin-bottom: 20px;
     padding: 10px;
-    background-color: #f9f9f9;
+    background-color: rgb(240, 240, 240);
     border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.cart-item-image {
+.image {
     width: 250px; /* Adjust image size */
     height: auto;
     margin-right: 10px;
@@ -78,4 +78,20 @@ h1 {
     margin: 5px 0;
     font-size: 14px;
     color: #666;
+}
+
+.q {
+    margin: 5px 0;
+    font-size: 17px;
+    color: black;
+}
+
+@media (min-width: 768px) {
+    .cart-item {
+        flex-direction: row; /* Switch to row direction on larger screens */
+    }
+
+    .cart-item-details {
+        margin: 0 50px; /* Adjust margin to fit row layout */
+    }
 }

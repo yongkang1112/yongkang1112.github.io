@@ -45,11 +45,13 @@ function displayCartItems() {
             let itemDiv = document.createElement('div');
             itemDiv.classList.add('cart-item');
             itemDiv.innerHTML = `
-                <img src="${item.product}" alt="${item.name}" class="cart-item-image">
+            <div class="cart-item-image">
+                <img src="${item.product}" alt="${item.name}" class="image">
+            </div>
                 <div class="cart-item-details">
                     <h3>${item.name}</h3>
                     <p>Price: ${item.price}</p>
-                    <p>Quantity: ${item.quantity}</p>
+                    <div class="q">Quantity: ${item.quantity}</div>
                     <button onclick="deleteItem('${item.name}')">Delete from cart</button>
                 </div>
             `;
