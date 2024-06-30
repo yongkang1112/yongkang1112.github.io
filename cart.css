@@ -56,7 +56,7 @@ h1 {
     width: auto;
     margin-bottom: 20px;
     padding: 10px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border: 1px solid #ddd;
     border-radius: 8px;
 }
