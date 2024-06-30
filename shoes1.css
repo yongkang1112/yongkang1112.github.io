@@ -1,9 +1,11 @@
+/* body style */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
+/* header */
 .header {
     display: flex;
     align-items: center;
@@ -23,6 +25,7 @@ body {
     font-weight: bold;
 }
 
+/* new product text */
 .newp {
     height: 50px;
     text-align: center;
@@ -35,15 +38,18 @@ body {
     margin: 20px auto;
 }
 
+/* picture & info product */
 .pic, .info {
     margin: 10px;
 }
 
+/* picture */
 .pic img {
     max-width: 100%;
     height: auto;
 }
 
+/* info */
 .info {
     display: flex;
     flex-direction: column;
@@ -51,32 +57,17 @@ body {
     background-color: rgb(235, 224, 222);
 }
 
+/* text */
 .info .text {
     font-size: 20px;
     margin: 10px 20px;
 }
 
+/* price */
 .info .price {
     font-size: 18px;
     color: #181818;
     margin: 10px 20px;
-}
-
-.info .btn button {
-    border: none;
-    outline: 0;
-    padding: 10px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 30%;
-    font-size: 15px;
-    margin: 20px 20px;
-}
-
-.info .btn button:hover{
-    background-color: rgb(79, 79, 79);
 }
 
 /* Media query for larger screens (PC) */

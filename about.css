@@ -2,19 +2,20 @@
     padding: 0;
     margin: 0;
 }
-
+/* seperate part */
 .space{
   height: 40px;
   width: 100%;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+/* top part header */
 .title {
     font-weight: bold;
     color: rgb(0, 0, 0);
     font-size: 18px;
   }
-  
+  /* arrow */
   a {
     text-decoration: none;
     font-size: 25px;
@@ -35,6 +36,7 @@ header a{
   margin:17px 20px;
 }
 
+/* header title */
 header .title {
     line-height: 60px;
     font-size: 30px;
@@ -43,7 +45,8 @@ header .title {
     color: rgb(255, 255, 255);
 }
 
-.slogan{
+/* title */
+.about{
   color: rgb(255, 255, 255);
   height:80vh;
   background-image: url(about/about.jpg);
@@ -58,6 +61,7 @@ header .title {
   justify-content: center;
 }
 
+/* font design */
 h1{
     font-size: 100px;
     font-family: "Oswald", sans-serif;
@@ -67,6 +71,7 @@ h1{
     margin-bottom: 60px;
 }
 
+/* title 2 */
 h2{
   font-size: 50px;
   font-family: "Oswald", sans-serif;
@@ -75,7 +80,7 @@ h2{
   display: flex;
   justify-content: space-around;
 }
-
+/* company profile */
 .company {
   display: flex;
   flex-wrap: wrap;
@@ -83,35 +88,39 @@ h2{
   background-color: rgb(21, 20, 20);
 }
 
+/* picture */
 .pict1, .pict2 {
   width: 50%;
   box-sizing: border-box;
 }
-
-@media (max-width: 768px) {
-  .pict1, .pict2 {
-    width: 100%;
-  }
-}
-
 .p1, .p2 {
   height: 230px;
   display: block;
   margin: 15px 60px;
 }
 
+/* position adjust */
+@media (max-width: 768px) {
+  .pict1, .pict2 {
+    width: 100%;
+  }
+}
+
+/* Description title */
 .word {
   font-size: 50px;
   color: white;
   margin: 0px 60px;
 }
 
+/* Description */
 .text {
   font-size: 25px;
   color: white;
   margin: 0px 60px;
 }
 
+/* Title3 */
 h3{
   font-size: 50px;
   font-family: "Oswald", sans-serif;
@@ -126,6 +135,7 @@ h3{
   justify-content: space-around;
 }
 
+/* Profile Card */
 .member_card {
   background-color: white;
   flex-direction: column;
@@ -138,6 +148,7 @@ h3{
   text-align: center;
 }
 
+/* Footer */
 .footer{
   height: 130px;
   width: 100%;
@@ -154,6 +165,7 @@ h3{
   color: rgb(115, 115, 115);
 }
 
+/* About & Contact */
 .about a:hover{
   color: darkblue;
 }

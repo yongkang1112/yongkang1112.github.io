@@ -1,46 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
     displayCartItems();
 });
-
-function addToCart(button) {
-    const card = button.closest('.card');
-    const product = card.querySelector('img').src;
-    const itemName = card.querySelector('.name').innerText;
-    const itemPrice = card.querySelector('.price').innerText;
-
-    const newItem = {
-        product: product,
-        name: itemName,
-        price: itemPrice,
-        quantity: atc1
-    };
-
-    let addtocart = JSON.parse(localStorage.getItem('addtocart')) || [];
-
-    const existingItem = addtocart.find(item => item.name === itemName);
-    if (!existingItem) {
-        newItem.quantity = 1;
-        addtocart.push(newItem);
-        localStorage.setItem('addtocart', JSON.stringify(addtocart));
-        atc1 += 1;
-        alert(`"${itemName}" added to cart successfully.`);
-    } else {
-        existingItem.quantity += 1;
-        localStorage.setItem('addtocart', JSON.stringify(addtocart));
-        atc1 += 1;
-        alert(`"${itemName}" added to cart successfully.`);
-    }
-}
-
+// diaplay the item in the cart
 function displayCartItems() {
+    // save in localStorage
     let cartItems = JSON.parse(localStorage.getItem('addtocart')) || [];
 
+    // get cart-item
     let cartItemsDiv = document.getElementById('cart-items');
     cartItemsDiv.innerHTML = ''; 
 
+    // if no thing in cart
     if (cartItems.length === 0) {
         cartItemsDiv.innerHTML = '<p>Your cart is empty.</p>';
+
+    // add the item in cart
     } else {
+        // create the box for item
         cartItems.forEach(item => {
             let itemDiv = document.createElement('div');
             itemDiv.classList.add('cart-item');
@@ -61,15 +37,19 @@ function displayCartItems() {
     }
 }
 
+// delete item
 function deleteItem(name) {
     let addtocart = JSON.parse(localStorage.getItem('addtocart')) || [];
     const index = addtocart.findIndex(item => item.name === name);
 
+    // item amount -1
     if (index !== -1) {
         if (addtocart[index].quantity > 1) {
             addtocart[index].quantity -= 1;
+        
+        // Remove the item from array if quantity is 0
         } else {
-            addtocart.splice(index, 1); // Remove the item from array if quantity is 0
+            addtocart.splice(index, 1); 
         }
         localStorage.setItem('addtocart', JSON.stringify(addtocart));
         displayCartItems(); // Refresh the displayed cart items
