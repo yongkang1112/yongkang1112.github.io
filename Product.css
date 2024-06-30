@@ -55,7 +55,7 @@ a:hover{
 }
 
 .brand ul li{
-    margin: 0 45px;
+    margin: 0 25px;
 }
 
 .brand ul li a{
@@ -73,13 +73,13 @@ a:hover{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
-    padding: 20px;
+    gap: 8px;
+    padding: 10px;
 }
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 186px;
+    max-width: 170px;
     text-align: center;
     font-family: arial;
     position: relative;
