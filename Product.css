@@ -80,6 +80,7 @@ a:hover{
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 170px;
+    height: 310px;
     text-align: center;
     font-family: arial;
     position: relative;
@@ -102,6 +103,7 @@ h1 .name{
 }
 
 h1 .price {
+    margin-top: 24px;
     color: grey;
     font-size: 18px;
 }

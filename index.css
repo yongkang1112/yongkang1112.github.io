@@ -81,21 +81,25 @@ h3{
     margin: 30px 40px;
 }
 
-.product {
+.product{
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
+    justify-content: center;
 }
 
-.product img {
+.row {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.product img{
     width: 300px; 
     height: 320px;   
 }
 
-.product .shoe, .shirt, .accessories {
+.product .item-1, .item-2, .item-3{
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
