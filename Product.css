@@ -36,7 +36,7 @@
 }
 
 .cart{
-    font-size: 35px;
+    font-size: 30px;
     position: absolute;
     right: 4%;
     font-style: none;
@@ -73,8 +73,8 @@ a:hover{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 25px;
-    padding: 25px;
+    gap: 10px;
+    padding: 20px;
 }
 
 .card {
