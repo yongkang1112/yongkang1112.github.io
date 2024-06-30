@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YK Shoes</title>
+    <link rel="stylesheet" href="Product.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- function button -->
+    <script>
+        var atc1 = 0;
+
+        // add to cart function
+        function addToCart(button) {
+            const card = button.closest('.card');
+            const product = card.querySelector('img').src;
+            const itemName = card.querySelector('.name').innerText;
+            const itemPrice = card.querySelector('.price').innerText;
+
+            const newItem = {
+                product: product,
+                name: itemName,
+                price: itemPrice,
+                quantity: atc1
+            };
+
+            // save in localStorage
+            let addtocart = JSON.parse(localStorage.getItem('addtocart')) || [];
+
+            const existingItem = addtocart.find(item => item.name === itemName);
+            // if none item in cart
+            if (!existingItem) {
+                newItem.quantity = 1;
+                addtocart.push(newItem);
+                localStorage.setItem('addtocart', JSON.stringify(addtocart));
+                atc1 += 1;
+                alert(`"${itemName}" added to cart successfully.`);
+            } 
+            
+            // if item in cart
+            else {
+                existingItem.quantity += 1;
+                localStorage.setItem('addtocart', JSON.stringify(addtocart));
+                atc1 += 1;
+                alert(`"${itemName}" added to cart successfully.`);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="top">
+        <div class="header">
+            <a href="index.html"><i class='bx bx-arrow-back'></i></a>
+            <div class="mhead">Shirt</div>
+        </div> 
+
+        <div class="list">
+            <ul>
+                <li><a href="Shoes.html">Shoes</a></li>
+                <li><a href="Shirt.html">Shirt</a></li>
+                <li><a href="Accessories.html">Accessories</a></li>
+            </ul>
+        </div>
+
+        <div class="icon-box">
+            <a class="cart" href="cart.html"><i class='bx bx-shopping-bag'></i></a>
+        </div>
+        
+    </div>  
+    
+    <div class="product">
+        <div class="card">
+            <img src="shirt/Nike Dri-FIT Legend.png" alt="Nike Dri-FIT Legend" style="width:100%">
+            <h1>
+                <div class="name">Nike Dri-FIT Legend</div>
+                <div class="price">[ RM 99 ]</div>
+            </h1>
+            <div class="btn"><button onclick="addToCart(this)">Add to Cart</button></div>
+        </div>
+
+        <div class="card">
+            <img src="shirt/Fleece hoodie.jpg" alt="Fleece hoodie" style="width:100%">
+            <h1>
+                <div class="name">Fleece hoodie</div>
+                <div class="price">[ RM 450 ]</div>
+            </h1>
+            <div class="btn"><button onclick="addToCart(this)">Add to Cart</button></div>
+        </div>
+
+        <div class="card">
+            <img src="shirt/Nike SB.png" alt="Nike SB" style="width:100%">
+            <h1>
+                <div class="name">Nike SB</div>
+                <div class="price">[ RM 109 ]</div>
+            </h1>
+            <div class="btn"><button onclick="addToCart(this)">Add to Cart</button></div>
+        </div>
+
+        <div class="card">
+            <img src="shirt/Fleece trousers.jpg" alt="Fleece trousers" style="width:100%">
+            <h1>
+                <div class="name">Fleece trousers</div>
+                <div class="price">[ RM 349 ]</div>
+            </h1>
+            <div class="btn"><button onclick="addToCart(this)">Add to Cart</button></div>
+        </div>
+    </div>
+
+
+</body>
+</html>

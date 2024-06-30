@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+}
+
+/* seperete part */
+.space{
+    height: 40px;
+    width: 100%;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* header */
+h1{
+    margin: 30px 40px;
+}
+
+.top {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 0 4px;
+}
+
+.top-icon{
+    width: 100px;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+
+    font-size: 30px;
+    margin-left: auto;
+    right: 30px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a :hover{
+    color: gray;
+}
+
+/* line */
+.hr1{
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* new item */
+.new{
+    margin-top: 90px;
+}
+
+.text-new{
+    width: fit-content;
+    height: fit-content;
+    margin: 20px auto;
+    
+}
+
+h2{
+    width: 50vw;
+    margin: 10px 5px;
+    text-align: center;
+    background-color: red;
+    color: white;
+}
+
+/* new item picture */
+.pic{
+    display: block;
+    margin: 0 auto;
+    width: 95vw;
+}
+
+/* title */
+h3{
+    font-size: 40px;
+    margin: 30px 40px;
+}
+
+/* product list */
+.product{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    margin: 10px 20px;
+    overflow-x: auto;
+}
+
+.product img{
+    width: 300px; 
+    height: 320px;   
+}
+
+.product .item-1, .item-2, .item-3{
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.product .text {
+    font-size: 25px;
+    margin: 10px;
+}
+
+/* popular shoes */
+.shoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.item1, .item2, .item3{
+    box-shadow: 0 0 4px;
+}
+
+/* box size */
+.shoe-1{
+    height: 300px;
+    width: 300px;
+} 
+
+.info{
+    font-size: 25px;
+    margin: 10px;
+}
+
+/* footer */
+.footer{
+    height: 130px;
+    width: 100%;
+}
+
+.about .text-footer{
+    margin: 15px 15px;
+    font-size: 20px;
+}
+
+.about a{
+    margin-left: 15px;
+    font-size: 17px;
+    color: rgb(115, 115, 115);
+}
+
+.about a:hover{
+    color: darkblue;
+}
+.cr{
+    margin: 35px 15px;
+}
+
